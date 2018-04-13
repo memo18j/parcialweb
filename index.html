@@ -1,0 +1,95 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Boostrap and Jquery</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="css/stilos.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar navbar-default " id="cabezera">
+	<div class="row">
+		<div class="navbar-header col-xs-12 col-sm-2">
+		<img title="Rusia 2018" src="https://azure.microsoft.com/svghandler/sql-database?width=600&height=315" /> 
+		</div>
+		<div class="col-xs-12 col-sm-10">
+			<h1>Laboratorio de Consultas Estructuradas</h1>
+		</div>
+		
+	</div>
+</nav>
+<div class="container">
+<div class="row">
+<div class="col-xs-12 col-sm-6">
+<h1>Laboratorio SQL</h1>
+<p>Ingresa al sistema para poder hacer uso del
+labororatorio de consultas SQL.</p>
+<picture>
+	<img src="https://s3-us-west-2.amazonaws.com/devcodepro/media/blog/que-es-sql.png" align="center">
+</picture>
+
+</div>
+<div class="col-xs-12 col-sm-6">
+<h1>Ingreso de usuario</h1>
+<br>
+	<form>
+	<br>
+    <div>
+        <label for="name">Usuario:</label>
+        <input type="text" id="name" />
+    </div>
+    <div>
+        <label for="mail">Clave:</label>
+        <input type="email" id="mail" />
+    </div>
+    <div class="button">
+        <button type="submit">
+        	Ingresar
+        </button>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+	</form>
+</div>
+</div>
+<br>
+<nav class="navbar navbar-default">
+	<div class="container">
+	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+		<span class="sr-only"> Toggle navigation</span>	
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+		<span class="icon-bar"></span>
+	</button>
+		<div class="container  collapse navbar-collapse" id="navbar">
+			<ul class="nav navbar-nav">
+				<li><a href="#" data-menu="ejercicios">Ejercicios</a></li>
+				<li><a href="#" data-menu="ejemplos">Ejemplos</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+<div class="container" id="contenedor">
+
+</div>
+</div>
+<br>
+<footer class="footer">
+<div class="container">
+	<p class="text-muted">Programación Aplicaciones Web - 2018 © 1151102-Memo</p>
+</div>
+<script type="text/javascript">
+    $("li a").click(function(event){
+    	event.preventDefault();
+    	if($(this).data('menu')!= null){
+           $("#contenedor").load($(this).data('menu')+'.html');
+    	}
+	});
+</script>
+</footer>
+</body>
+</html>
